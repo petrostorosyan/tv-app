@@ -29,7 +29,9 @@ const Sidebar: FC = () => {
               onClick={() => handleActiveLink(id)}
             >
               <img src={iconSource} alt={title} />
-              <p className="item-title">{title}</p>
+              <p className={`item-title ${
+                activeItemId === id ? "active" : ""
+              }`}>{title}</p>
             </div>
           ))}
         </div>

@@ -1,16 +1,31 @@
 .film-carousel-container {
-    width: 100%;
+  width: 100%;
 }
 
 .trending-title {
-    font-size: 32px;
-    margin-bottom: 15px;
+  font-size: 32px;
+  margin-bottom: 15px;
 }
 
 .film-carousel-slide {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .film-carousel-image {
-    height: 250px;
+  height: 250px;
+  transition: 0.5s;
+}
+
+/* <--------------------------------------------  Media  ---------------------------------------------> */
+
+@media screen and (max-width: 1620px) {
+  .film-carousel-image {
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  .film-carousel-image {
+    height: 200px;
+  }
 }

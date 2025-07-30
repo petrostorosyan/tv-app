@@ -12,7 +12,7 @@ interface IFilmsCarouselData {
 
 interface FilmsCarouselProps {
   data: IFilmsCarouselData[];
-  onChangeActiveId: (id: number) => void
+  onChangeActiveId: (id: number) => void;
 }
 
 const FilmsCarousel: FC<FilmsCarouselProps> = ({ data, onChangeActiveId }) => {
@@ -25,11 +25,29 @@ const FilmsCarousel: FC<FilmsCarouselProps> = ({ data, onChangeActiveId }) => {
         freeMode={true}
         modules={[FreeMode]}
         className="mySwiper"
+        breakpoints={{
+          1030: {
+            slidesPerView: 6, 
+          },
+          1200: {
+            slidesPerView: 7, 
+          },
+          1470: {
+            slidesPerView: 8,
+          },
+        }}
       >
         {data.map((item) => {
           return (
-            <SwiperSlide onClick={() => onChangeActiveId(item.id)} className="film-carousel-slide">
-              <img className="film-carousel-image" src={item.coverImage} alt={item.title} />
+            <SwiperSlide
+              onClick={() => onChangeActiveId(item.id)}
+              className="film-carousel-slide"
+            >
+              <img
+                className="film-carousel-image"
+                src={item.coverImage}
+                alt={item.title}
+              />
             </SwiperSlide>
           );
         })}
