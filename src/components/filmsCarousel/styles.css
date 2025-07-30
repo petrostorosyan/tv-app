@@ -1,0 +1,16 @@
+.film-carousel-container {
+    width: 100%;
+}
+
+.trending-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.film-carousel-slide {
+    cursor: pointer;
+}
+
+.film-carousel-image {
+    height: 250px;
+}

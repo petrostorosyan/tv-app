@@ -1,0 +1,87 @@
+.film-info-container {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.film-category {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #858688;
+  margin-bottom: 12px;
+}
+
+.film-title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.film-title-img {
+  margin-bottom: 18px;
+}
+
+.film-information-box {
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+
+.film-release-year,
+.film-mp-rating {
+  margin-right: 18px;
+}
+
+.film-description {
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 26px;
+  white-space: normal;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.buttons-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 18px;
+}
+
+.film-button {
+  width: 240px;
+  height: 72px;
+  border-radius: 40px;
+  font-size: 32px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.play-btn {
+  background-color: white;
+  color: #0c0c0c;
+}
+
+.play-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 12px;
+}
+
+.more-btn {
+  background-image: linear-gradient(
+    to right,
+    #2727f5,
+    #1624d3,
+    #0620b1,
+    #001b91,
+    #001671
+  );
+  color: #f1f1f1;
+}
