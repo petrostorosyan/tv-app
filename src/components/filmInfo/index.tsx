@@ -25,7 +25,7 @@ interface FilmInfoProps {
 const FilmInfo: FC<FilmInfoProps> = ({ info }) => {
   return (
     <div className="film-info-container">
-      <p className="film-category">{info.category}</p>
+      <p>{info.category}</p>
       {info.titleImage ? (
         <img className="film-title-img" src={titleImg} alt="title-image" />
       ) : (
@@ -33,17 +33,17 @@ const FilmInfo: FC<FilmInfoProps> = ({ info }) => {
       )}
 
       <div className="film-information-box">
-        <span className="film-release-year">{info.releaseYear}</span>
-        <span className="film-mp-rating">{info.mpaRating}</span>
+        <span>{info.releaseYear}</span>
+        <span>{info.mpaRating}</span>
         <span>{formatDuration(info.duration)}</span>
       </div>
-      <p className="film-description">{info.description}</p>
+      <p>{info.description}</p>
       <div className="buttons-box">
-        <button className="play-btn film-button">
-          <img className="play-icon" src={playIcon} alt="play-icon" />
+        <button>
+          <img src={playIcon} alt="play-icon" />
           <span>Play</span>
         </button>
-        <button className="more-btn film-button">More Info</button>
+        <button>More Info</button>
       </div>
     </div>
   );

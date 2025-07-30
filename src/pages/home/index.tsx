@@ -3,14 +3,14 @@ import FilmsCarousel from "../../components/filmsCarousel";
 import Sidebar from "../../components/sidebar";
 import "./styles.css";
 import { trendingNow } from "../../data/trendingData";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type FC } from "react";
 
-const lastViewedMovieId = "lastViewedMovieId";
+const lastViewedMovieId: string = "lastViewedMovieId";
 
-const HomePage = () => {
+const HomePage: FC = () => {
   const [activeId, setActiveId] = useState<number>(trendingNow[0].id);
-  const [showVideo, setShowVideo] = useState(false);
-  const [worksVideoPlayer, setWorksVideoPlayer] = useState(false);
+  const [showVideo, setShowVideo] = useState<boolean>(false);
+  const [worksVideoPlayer, setWorksVideoPlayer] = useState<boolean>(false);
 
   const sortedTrendingData = useMemo(() => {
     const lastId = sessionStorage.getItem(lastViewedMovieId);
@@ -64,11 +64,6 @@ const HomePage = () => {
     }
   }, [activeId, worksVideoPlayer]);
 
-  // useEffect(() => {
-  //   console.log(activeId, "idddd");
-  //   console.log(activeFilmData, "activeFilmData");
-  // }, [activeId]);
-
   return (
     <div className="home-page-container">
       <div className="sidebar">
@@ -83,8 +78,7 @@ const HomePage = () => {
         <FilmInfo info={activeFilmData} />
         {showVideo && (
           <video
-            // controls
-            autoPlay={true}
+            autoPlay
             muted
             loop
             playsInline
