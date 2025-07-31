@@ -4,10 +4,9 @@ import { navItems, sidebarFooterLinks } from "../../data/sidebarData";
 import user from "../../assets/images/song-gi-hun.png";
 
 const Sidebar: FC = () => {
-  const [activeItemId, setActiveItemId] = useState(2);
+  const [activeItemId, setActiveItemId] = useState<number>(2);
 
   const handleActiveLink = (id: number) => {
-    console.log("Clicked ID:", id);
     setActiveItemId(id);
   };
 
@@ -15,8 +14,8 @@ const Sidebar: FC = () => {
     <div className="sidebar-container">
       <div className="sidebar-top-section">
         <div className="user-info">
-          <img className="user-image" src={user} alt="user" />
-          <p className="user-name">Daniel</p>
+          <img src={user} alt="user" />
+          <p>Daniel</p>
         </div>
 
         <div className="sidebar-content">
