@@ -93,6 +93,7 @@
   border-radius: 50%;
   cursor: pointer;
   overflow: hidden;
+  transition: 0.3s;
 }
 
 .sidebar-container:hover .sidebar-item-content {
@@ -116,18 +117,24 @@
   width: 24px;
   height: 24px;
   margin-left: 20px;
+  transition: 0.5s;
 }
 
 .item-title {
+  max-width: 0;
   opacity: 0;
   font-size: 32px;
   margin-left: 40px;
-  transition: opacity 0.1s ease-in-out;
+  transition: max-width 0.4s ease, opacity 0.2s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  pointer-events: none;
 }
 
 .sidebar-container:hover .item-title {
+  max-width: 280px;
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  pointer-events: auto;
 }
 
 .item-title.active {
@@ -171,7 +178,7 @@
   .sidebar-container {
     width: 140px;
     padding: 40px 0;
-    padding-left: 30px;
+    padding-left: 40px;
   }
 
   .sidebar-container:hover {
@@ -198,6 +205,10 @@
   .sidebar-container:hover .sidebar-content {
     width: 270px;
   }
+
+.sidebar-item-content > img {
+  margin-left: 17px;
+}
 
   .item-title {
     font-size: 28px;

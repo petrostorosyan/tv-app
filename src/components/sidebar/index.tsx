@@ -20,7 +20,7 @@ const Sidebar: FC = () => {
 
         <div className="sidebar-content">
           {navItems.map(({ id, iconSource, title }) => (
-            <div className="sidebar-item">
+            <div className="sidebar-item" key={id}>
               <div
                 key={id}
                 className={`sidebar-item-content ${
