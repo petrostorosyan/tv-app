@@ -20,17 +20,23 @@ const Sidebar: FC = () => {
 
         <div className="sidebar-content">
           {navItems.map(({ id, iconSource, title }) => (
-            <div
-              key={id}
-              className={`sidebar-item-content ${
-                activeItemId === id ? "active" : ""
-              }`}
-              onClick={() => handleActiveLink(id)}
-            >
-              <img src={iconSource} alt={title} />
-              <p className={`item-title ${
-                activeItemId === id ? "active" : ""
-              }`}>{title}</p>
+            <div className="sidebar-item">
+              <div
+                key={id}
+                className={`sidebar-item-content ${
+                  activeItemId === id ? "active" : ""
+                }`}
+                onClick={() => handleActiveLink(id)}
+              >
+                <img src={iconSource} alt={title} />
+                <p
+                  className={`item-title ${
+                    activeItemId === id ? "active" : ""
+                  }`}
+                >
+                  {title}
+                </p>
+              </div>
             </div>
           ))}
         </div>
